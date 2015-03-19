@@ -1,0 +1,47 @@
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\SQLlite.exe.config
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\school_sqlite
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\SQLlite.exe
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\SQLlite.pdb
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\EntityFramework.dll
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\System.Data.SQLite.dll
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\EntityFramework.xml
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\bin\Debug\System.Data.SQLite.xml
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.csprojResolveAssemblyReference.cache
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\MainWindow.baml
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\MainWindow.g.cs
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\App.g.cs
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite_MarkupCompile.cache
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.g.resources
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.Properties.Resources.resources
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.csproj.GenerateResource.Cache
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.exe
+C:\Users\Arne\Dropbox\School_2014-2015\Semester_2\Software ontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.pdb
+d:\Temp\Week 3\SQLlite\bin\Debug\SQLlite.exe.config
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite.exe
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite.pdb
+d:\Temp\Week 3\SQLlite\bin\Debug\school_sqlite
+d:\Temp\Week 3\SQLlite\bin\Debug\SQLlite.exe
+d:\Temp\Week 3\SQLlite\bin\Debug\SQLlite.pdb
+d:\Temp\Week 3\SQLlite\bin\Debug\EntityFramework.dll
+d:\Temp\Week 3\SQLlite\bin\Debug\EntityFramework.SqlServer.dll
+d:\Temp\Week 3\SQLlite\bin\Debug\System.Data.SQLite.dll
+d:\Temp\Week 3\SQLlite\bin\Debug\System.Data.SQLite.EF6.dll
+d:\Temp\Week 3\SQLlite\bin\Debug\System.Data.SQLite.Linq.dll
+d:\Temp\Week 3\SQLlite\bin\Debug\EntityFramework.xml
+d:\Temp\Week 3\SQLlite\bin\Debug\EntityFramework.SqlServer.xml
+d:\Temp\Week 3\SQLlite\bin\Debug\System.Data.SQLite.xml
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite.csprojResolveAssemblyReference.cache
+d:\Temp\Week 3\SQLlite\obj\Debug\MainWindow.baml
+d:\Temp\Week 3\SQLlite\obj\Debug\MainWindow.g.cs
+d:\Temp\Week 3\SQLlite\obj\Debug\App.g.cs
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite_MarkupCompile.cache
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite.g.resources
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite.Properties.Resources.resources
+d:\Temp\Week 3\SQLlite\obj\Debug\SQLlite.csproj.GenerateResource.Cache
+D:\Users\Johan\Dropbox\Artesis\Anno 2014 - 2015\Semester 2\Labo Softwareontwikkeling 4\Week 3\SQLlite\bin\Debug\SQLlite.exe.config
+D:\Users\Johan\Dropbox\Artesis\Anno 2014 - 2015\Semester 2\Labo Softwareontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.exe
+D:\Users\Johan\Dropbox\Artesis\Anno 2014 - 2015\Semester 2\Labo Softwareontwikkeling 4\Week 3\SQLlite\obj\Debug\SQLlite.pdb
