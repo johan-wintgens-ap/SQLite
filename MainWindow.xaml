@@ -3,5 +3,55 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+<!--***********************************************-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ListBox Name="vakkenListBox" Margin="10"/>
+
+            <DockPanel Grid.Row="1" Margin="5">
+                <Button Grid.Row="1" Name="addCourseButton" Margin="5">
+                    <TextBlock Text="Add..." Margin="5"/>
+                </Button>
+                <TextBox Grid.Row="1" Name="addBox" Margin="5"/>
+            </DockPanel>
+        </Grid>
+<!--*********************************************-->
+        <Viewbox Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,5,10">
+        <StackPanel>
+            <DockPanel>
+                <TextBlock Text="ID:" Margin="10"/>
+                <TextBlock Name="idBlock" VerticalAlignment="Center" Text="hier het id"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Vak:" Margin="10"/>
+                    <TextBox Name="vakBlock" VerticalAlignment="Center" Text="hier de naam van het vak"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Score:" Margin="10"/>
+                    <TextBox Name="scoreBlock" VerticalAlignment="Center" Text="hier de score"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Datum:" Margin="10"/>
+                    <DatePicker Name="datumBlock" VerticalAlignment="Center" Text="hier de datum" Margin="0,0,5,0"/>
+            </DockPanel>
+            <StackPanel>
+                <TextBlock Text="Opmerking:" Margin="10"/>
+                    <TextBox x:Name="opmerkingBlock" Margin="20,0,10,0" VerticalAlignment="Center" Text="hier het id" Width="200"/>
+                </StackPanel>
+            <DockPanel>
+                <TextBlock Text="Credits:" Margin="10"/>
+                    <TextBox Name="creditBlock" VerticalAlignment="Center" Text="hier het id"/>
+            </DockPanel>
+        </StackPanel>
+        </Viewbox>
+
     </Grid>
 </Window>

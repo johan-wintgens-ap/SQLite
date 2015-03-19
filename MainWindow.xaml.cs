@@ -39,13 +39,15 @@ namespace SQLlite
             SQLiteCommand command = new SQLiteCommand(sql, mDbconnection);
             command.ExecuteNonQuery();
 
-            sql = "select * from highscores order by score desc";
+            sql = "select * from School order by score desc";
             command = new SQLiteCommand(sql, mDbconnection);
             SQLiteDataReader reader = command.ExecuteReader();
 
+            string fullLine;
             while (reader.Read())
             {
-                Console.WriteLine("Name: " + reader["name"] + "\tScore: " + reader["score"]);
+                fullLine = reader.GetString(1);
+                vakkenListBox.Items.Add(fullLine);
             }
 
             mDbconnection.Close();
