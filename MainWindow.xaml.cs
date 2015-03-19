@@ -29,30 +29,47 @@ namespace SQLlite
         {
 
             InitializeComponent();
-            
-            mDbconnection = new SQLiteConnection("Data Source=school_sqlite;Version=3;");
 
+            //Bestand linken
+            mDbconnection = new SQLiteConnection("Data Source=school_sqlite;Version=3;");
+            //Verbinding maken
             mDbconnection.Open();
 
-            string sql = "create table highscores (name varchar(20), score int)";
-
+            //SQL-Statement om alles uit de table "School" op te vragen
+            string sql = "SELECT * FROM School ORDER BY score DESC";
             SQLiteCommand command = new SQLiteCommand(sql, mDbconnection);
-            command.ExecuteNonQuery();
-
-            sql = "select * from School order by score desc";
-            command = new SQLiteCommand(sql, mDbconnection);
             SQLiteDataReader reader = command.ExecuteReader();
+            
+            //File uitlezen
 
-            string fullLine;
-            while (reader.Read())
+            try
             {
-                fullLine = reader.GetString(1);
-                vakkenListBox.Items.Add(fullLine);
+                List<dbEntry> Entries = new List<dbEntry>();
+                while (reader.Read())
+                {
+                    dbEntry temp = new dbEntry();
+                    temp.id = reader.GetInt32(0);
+                    temp.naamVak = reader.GetString(1);
+                    temp.score = reader.GetInt32(2);
+                    temp.datum = Convert.ToDateTime(reader.GetString(3));
+                    temp.opmerking = reader.GetString(4);
+                    temp.credit = reader.GetInt32(5);
+
+                    vakkenListBox.Items.Add(temp);
+                }
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.Message);
+                MessageBox.Show("Er is iets misgegaan bij het inladen van de DataBase");
             }
 
             mDbconnection.Close();
         }
 
-     
+        private void vakkenListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }     
     }
 }
