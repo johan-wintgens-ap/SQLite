@@ -27,6 +27,8 @@ namespace SQLlite
         string sql;
         SQLiteCommand command;
         SQLiteDataReader reader;
+        dbEntry selectedEntry;
+        bool writeToDatabase;
         
         public MainWindow()
         {
@@ -43,6 +45,67 @@ namespace SQLlite
             reader = command.ExecuteReader();
 
             //File uitlezen
+            readFile();
+
+            //In listbox laden
+            updateListbox();
+            
+            //Connectie sluiten
+            mDbconnection.Close();
+        }
+
+        private void vakkenListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (vakkenListBox.SelectedIndex != -1)
+            {
+                selectedEntry = Entries[vakkenListBox.SelectedIndex];
+
+                idBlock.Text = Convert.ToString(selectedEntry.id);
+                vakBlock.Text = selectedEntry.naamVak;
+                scoreBlock.Text = Convert.ToString(selectedEntry.score);
+                datumBlock.SelectedDate = selectedEntry.datum;
+                opmerkingBlock.Text = selectedEntry.opmerking;
+                creditBlock.Text = Convert.ToString(selectedEntry.credit);
+            }
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            //savePressed detecteerd of er op de save-knop gedrukt wordt. Indien dit het geval is wordt de database met de nieuwe gegevens overschreven bij het afsluiten van het programma
+            writeToDatabase = true;
+            selectedEntry = Entries[vakkenListBox.SelectedIndex];
+
+            selectedEntry.naamVak = vakBlock.Text;
+            selectedEntry.score = Convert.ToInt32(scoreBlock.Text);
+            selectedEntry.datum = (DateTime)datumBlock.SelectedDate;
+            selectedEntry.opmerking = opmerkingBlock.Text;
+            selectedEntry.credit = Convert.ToInt32(creditBlock.Text);
+
+            updateListbox();
+        }
+
+        private void updateListbox()
+        {
+            try
+            {
+                int rememberSelected = vakkenListBox.SelectedIndex;
+                vakkenListBox.Items.Clear();
+
+                foreach (var item in Entries)
+                {
+                    vakkenListBox.Items.Add(item);
+                }
+
+                vakkenListBox.SelectedIndex = rememberSelected;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Er is iets misgegaan bij het laden van de gegevens in de listbox");
+            }
+        }
+
+        private void readFile()
+        {
             try
             {
                 while (reader.Read())
@@ -62,34 +125,11 @@ namespace SQLlite
             {
                 MessageBox.Show("Er is iets misgegaan bij het inladen van de DataBase");
             }
-
-            //In listbox laden
-            try
-            {
-                foreach (var item in Entries)
-                {
-                    vakkenListBox.Items.Add(item);
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Er is iets misgegaan bij het inladen van de gegevens in de listbox");
-            }
-
-            mDbconnection.Close();
         }
 
-        private void vakkenListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void addCourseButton_Click(object sender, RoutedEventArgs e)
         {
-            if (vakkenListBox.SelectedIndex != -1)
-            {
-                idBlock.Text = Convert.ToString(Entries[vakkenListBox.SelectedIndex].id);
-                vakBlock.Text = Entries[vakkenListBox.SelectedIndex].naamVak;
-                scoreBlock.Text = Convert.ToString(Entries[vakkenListBox.SelectedIndex].score);
-                datumBlock.SelectedDate = Entries[vakkenListBox.SelectedIndex].datum;
-                opmerkingBlock.Text = Entries[vakkenListBox.SelectedIndex].opmerking;
-                creditBlock.Text = Convert.ToString(Entries[vakkenListBox.SelectedIndex].credit);
-            }
-        }     
+            writeToDatabase = true;
+        }
     }
 }
