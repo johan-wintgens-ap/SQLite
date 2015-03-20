@@ -29,6 +29,7 @@
             <DockPanel>
                 <TextBlock Text="ID:" Margin="10"/>
                 <TextBlock Name="idBlock" VerticalAlignment="Center" Text="hier het id"/>
+                <Button Name="saveButton" Content="Save" Width="50" HorizontalAlignment="Right" Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <TextBlock Text="Vak:" Margin="10"/>
