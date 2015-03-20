@@ -81,6 +81,28 @@ namespace SQLlite
             selectedEntry.opmerking = opmerkingBlock.Text;
             selectedEntry.credit = Convert.ToInt32(creditBlock.Text);
 
+            try
+            {
+                string sql = "UPDATE School "+ 
+                                "SET  naamvak ='" + selectedEntry.naamVak + "',"+
+                                "score = " + selectedEntry.score + "," +
+                                "datum = '" + selectedEntry.datum + "'," +
+                                "opmerking = '" + selectedEntry.opmerking+"'," +
+                                "credit =" + selectedEntry.credit + " " +
+                                "WHERE id = " + selectedEntry.id;
+                SQLiteCommand dbCommand = new SQLiteCommand(sql, mDbconnection);
+                mDbconnection.Open();
+                dbCommand.ExecuteNonQuery();
+            }
+            catch (Exception ez)
+            {
+                MessageBox.Show(ez.Message);
+            }
+            finally
+            {
+                mDbconnection.Close();
+            }
+
             updateListbox();
         }
 
@@ -130,6 +152,25 @@ namespace SQLlite
         private void addCourseButton_Click(object sender, RoutedEventArgs e)
         {
             writeToDatabase = true;
+
+            try
+            {
+                /*sql = "insert into School (name, score, datum, opmerking, credit) values ('" +
+                                    vakBlock.Text + "', " + scoreBlock.Text + ", '" + datumBlock.Text + "', '" +
+                                    opmerkingBlock.Text + "', " + creditBlock.Text + ")";
+                command = new SQLiteCommand(sql, mDbconnection);
+                mDbconnection.Open();
+                command.ExecuteNonQuery();*/
+                //BaseInfo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                mDbconnection.Close();
+            }
         }
     }
 }
